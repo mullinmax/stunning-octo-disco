@@ -17,11 +17,14 @@ if len(sys.argv) > 1:
 
 file_names = os.listdir(path)
 for file_name in file_names:
-    with open(path +file_name) as f:
-        sn, prt = get_values(f.readlines())
-        output = '{file_name}:{serial_number}:{port}'.format(
-            file_name = file_name,
-            serial_number = sn, 
-            port = prt
-        )
-        print(output)
+    try:
+        with open(path +file_name) as f:
+            sn, prt = get_values(f.readlines())
+            output = '{file_name}:{serial_number}:{port}'.format(
+                file_name = file_name,
+                serial_number = sn, 
+                port = prt
+            )
+            print(output)
+    except:
+        pass
