@@ -1,5 +1,0 @@
-#!/bin/bash
-#IOT Gateway Connect Script
-
-Serial Number: 222-222
-ssh iot-regal@localhost -p 22222

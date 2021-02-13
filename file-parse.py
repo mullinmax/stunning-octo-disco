@@ -2,8 +2,8 @@ import os
 import sys
 import re
 
-sen_re = re.compile('Seria.*\s(\d+-\d+)')
-prt_re = re.compile('ssh.* -p.*\s(\d+)')
+sen_re = re.compile('Serial Number:.*\s(.*)')
+prt_re = re.compile('ssh\s.*@.*\s-p\s(\d+)')
 
 
 def get_values(lines):
@@ -27,4 +27,4 @@ for file_name in file_names:
             )
             print(output)
     except:
-        pass
+        print(file_name)
