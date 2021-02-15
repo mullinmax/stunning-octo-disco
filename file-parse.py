@@ -2,7 +2,7 @@ import os
 import sys
 import re
 
-sen_re = re.compile('Serial Number:.*\s(.*)')
+sen_re = re.compile('Serial Number:.*\s([^\n\s]+)')
 prt_re = re.compile('ssh\s.*@.*\s-p\s(\d+)')
 
 
